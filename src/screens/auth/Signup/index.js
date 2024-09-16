@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { styles } from "./styles";
 
 import AuthHeader from "../../../components/AuthHeader";
 import Input from "../../../components/Input";
 import Checkbox from "../../../components/Checkbox";
 import Button from "../../../components/Button";
+import Seperator from "../../../components/Seperator";
+import GoogleLogin from "../../../components/GoogleLogin";
 
 const Signup = () => {
 
@@ -28,6 +30,16 @@ const Signup = () => {
             </View>
 
             <Button style={styles.button} title="Sign Up"/>
+
+            <Seperator text="Or sign ip with"/>
+
+            <GoogleLogin /> 
+
+            <Text style={styles.footerText}>
+                Already have an account?
+                <Text style={styles.footerLink}>Sing in</Text>
+            </Text>
+
              
         </View>
         
